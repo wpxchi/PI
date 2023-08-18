@@ -1,9 +1,33 @@
 import React from "react";
 import Cards from "../Cards/Cards";
 import style from './CardsContainer.module.css';
+import { FailureHandler } from "../../Redux/actions";
+import { useDispatch } from "react-redux";
 
-const CardsContainer = ({currentData}) => {
-  if(currentData.length>0){
+const CardsContainer = ({currentData, Error}) => {
+const dispatch= useDispatch()
+const FailureChange=(e)=>{
+  dispatch(FailureHandler(e.target.value))
+}
+ if(Error){
+  return (
+   
+      <div className={style.ErrorContent}>
+        <p className={style.ErrorText}>{Error}</p>
+        <img
+          src="https://media.tenor.com/Hg2Mb_mQdhYAAAAi/pokemon-pokeball.gif"
+          alt="Error"
+          className={style.ErrorImage}
+        />
+        <button value="Err" onClick={FailureChange} className={style.ButtonError}>
+        ← BACK
+        </button>
+      </div>
+   
+  );
+  }
+  
+  else if(currentData.length>0){
     return (
       <div className={style.CardsContainer}>
         {currentData &&
@@ -18,6 +42,8 @@ const CardsContainer = ({currentData}) => {
           ))}
       </div>
     );}
+
+   
 
     else {
       return (

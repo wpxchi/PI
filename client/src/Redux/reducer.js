@@ -1,4 +1,4 @@
-import { ALL_POKEMONS, ALL_TYPES, POKEMON_NAME, ORDER_ATTACK, ORDER_NAME, ORDER_ORIGIN, ORDER_TYPES, } from "./actions"
+import { ALL_POKEMONS, ALL_TYPES, POKEMON_NAME, ORDER_ATTACK, ORDER_NAME, ORDER_ORIGIN, ORDER_TYPES,FAILURE } from "./actions"
 
 const initialState={
     Pokemons: [],
@@ -8,7 +8,7 @@ const initialState={
     OrderName:[],
     OrderOrigin:[],
     OrderTypes:[],
-   
+    Failure:'',
 }
 
 const rootReducer=(state= initialState, action)=>{
@@ -56,6 +56,11 @@ switch(action.type){
             }
             else if (action.payload === 'Created'){
                const PokemonsDb= state.Pokemons.filter((e) => e.createdInDb)
+               if(PokemonsDb.length===0){
+                return {
+                  ...state, Failure: 'No Pokemons Here'
+                }
+               }
                return { ...state, OrderOrigin: PokemonsDb}
             }
             else if(action.payload==='Api'){
@@ -72,9 +77,19 @@ switch(action.type){
            e.types.includes(action.payload)
            );
           }
+          if(filterType.length===0) return {
+            ...state, Failure: 'No Pokemons Here'
+          }
              return {
            ...state,
             OrderTypes: filterType,
+             }
+
+             case FAILURE: if (action.payload==='Err'){
+              return {...state, Failure:''}
+             }
+             else return {
+              ...state, Failure: action.payload
              }
         
     default: return {

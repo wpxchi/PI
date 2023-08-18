@@ -30,13 +30,16 @@ const Forms=()=>{
   const [errors, setErrors] = useState({});
   
 
+// Efecto para validar el formulario cuando cambian sus valores
   useEffect(() => {
     const validationErrors = Validate(form);
     setErrors(validationErrors);
   }, [form]);
 
+  // Deshabilitar el botón de envío si hay errores de validación
   const disabledButton = Object.keys(errors).length > 0;
 
+  // Manejar cambios en los campos de entrada del formulario
   const handleInputChange = (event) => {
     const updatedForm = {
       ...form,
@@ -45,6 +48,7 @@ const Forms=()=>{
     setForm(updatedForm);
   };
 
+  // Manejar la selección de tipos de Pokémon
   const handleSelect = (e) => {
     const updatedForm = {
       ...form,
@@ -53,6 +57,7 @@ const Forms=()=>{
     setForm(updatedForm);
   };
 
+  // Enviar el formulario al servidor
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post("http://localhost:3001/pokemons", form)
@@ -71,7 +76,7 @@ const Forms=()=>{
         });
       })
       .catch((err) => {
-        window.alert('Ya creaste un pokemon con ese nombre');
+        window.alert('You already created a pokemon with that name');
       });
   };
 
@@ -147,6 +152,7 @@ const Forms=()=>{
         </button>
         <Link to={'/HomePage'} className={style.LinkButton}>
           <button className={style.DoneButton}>Done</button>
+          <button>BACK</button>
         </Link>
       </div>
       </form>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .CardsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -26,3 +27,52 @@
     height: auto;
     margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
+
+.ErrorContent {
+  font-family: 'Press Start 2P', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 65vh; /* Cambia la altura al 50% de la altura total de la pantalla */
+  background-color: rgb(237, 235, 252);
+  position: fixed;
+  bottom: 0; /* Coloca el elemento en la parte inferior */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+  .ErrorImage {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  border-radius: 10px; 
+  }
+  
+
+  .ButtonError {
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px; /* Cambia la posición a la parte inferior */
+    left: 50%; /* Coloca el botón en el centro horizontal */
+    transform: translateX(-50%); /* Centra horizontalmente */
+  }
+  
+  .ButtonError:hover {
+    background-color: #ff1a1a;
+  }
+  
+  
+  
+  

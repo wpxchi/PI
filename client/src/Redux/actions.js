@@ -7,6 +7,7 @@ export const ORDER_NAME= 'ORDER_NAME'
 export const ORDER_ATTACK= 'ORDER_ATTACK'
 export const ORDER_TYPES= 'ORDER_TYPES'
 export const ORDER_ORIGIN= 'ORDER_ORIGIN'
+export const FAILURE='FAILURE'
 
 
 export const allPokemons=()=>{
@@ -25,14 +26,17 @@ return async function (dispatch){
 
 export const PokemonByName=(name)=>{
 return async function (dispatch){
-    
-    const res = await axios.get(`http://localhost:3001/pokemons?name=${name}`);
+    try {
+        const res = await axios.get(`http://localhost:3001/pokemons?name=${name}`);
     dispatch({type:POKEMON_NAME, payload:res.data})
-   
-       
-    
-    
+    } catch (error) {
+        dispatch({type: FAILURE, payload:`NO POKEMON WITH NAME ${name}` })
+    }  
 }
+}
+
+export const FailureHandler=(Err)=>{
+    return ({type: FAILURE, payload:Err})
 }
 
 export const orderName=(order)=>{

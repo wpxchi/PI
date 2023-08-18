@@ -29,7 +29,7 @@ const postPokemonsHandler = async (req, res) => {
       speed = null,
       height = null,
       weight = null,
-      createdInDb = true, //no es necesario 
+      createdInDb = true, 
       types,
     } = req.body;
     try {

@@ -5,15 +5,19 @@ import style from './SearchBar.module.css'
 
 const SearchBar=()=>{
   const dispatch= useDispatch();
+  // Estado local para almacenar el valor de búsqueda
   const [searchValue, setSearchValue]=useState('')
 
+  // Manejar el cambio en el campo de búsqueda
   const HandleChange=(event)=>{
     setSearchValue(event.target.value);
   }
+   // Realizar una búsqueda y despachar una acción para obtener Pokémon por nombre
   const HandleSearch=()=>{
     dispatch(PokemonByName(searchValue))
     setSearchValue('')}
 
+     // Restaurar la lista de todos los Pokémon
      const HandleQuit=()=>{
             dispatch(allPokemons())
            }
