@@ -12,7 +12,7 @@ const HomePage = () => {
   const pokemons = useSelector((state) => state.Pokemons);
   const name = useSelector((state) => state.PokemonName);
   const attack = useSelector((state) => state.OrderAttack);
-  const orderName = useSelector((state) => state.OrderName);
+  const orderName = useSelector((state) => state.Copy);
   const orderOrigin = useSelector((state) => state.OrderOrigin);
   const orderTypes = useSelector((state) => state.OrderTypes);
   const Error= useSelector((state)=> state.Failure);

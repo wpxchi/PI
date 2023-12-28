@@ -1,0 +1,49 @@
+.custom-offcanvas {
+  background-color: #282c34; /* Fondo oscuro */
+  color: white;
+}
+
+.menu-button {
+  background-color: #f6f7f7; /* Azul */
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.menu-button:hover {
+  background-color: #4fa3d1; /* Azul más oscuro al pasar el ratón */
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.rounded-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bio {
+  flex: 1;
+}
+
+.bio-text {
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+.offcanvas-backdrop {
+  display: none;
+}

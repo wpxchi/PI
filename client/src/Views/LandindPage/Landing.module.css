@@ -1,15 +1,67 @@
 .fondoLanding {
-    background-image: url('./pokemonFondo1.webp');
+    /* background-image: url('./pokemonFondo1.webp');
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
-    position: fixed;
+
     top: 0;
-    left: 0;
+    left: 0; */
+
+    
+ background: rgb(69,8,34);
+background: radial-gradient(circle, rgba(69,8,34,1) 0%, rgba(67,56,77,1) 26%, rgba(95,125,138,1) 100%);
+    
+    
+  }
+
+ .titleContainer {
+  position: absolute;
+  top: 20%; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
 
-.botonInicio {
+.titleContainer img {
+  width: 300px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto; /* Esto mantiene la proporción original de la imagen */
+}
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .carousel-caption {
+  position: absolute;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior según tus necesidades */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+  
+  .carouselContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .botonInicio {
     cursor: pointer;
     padding: 10px 20px;
     background-color: #5b6672;
@@ -17,17 +69,17 @@
     border: none;
     transition: background-color 0.3s ease;
     position: fixed;
-    top: 70%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, 50%); /* Ajustar posición */
-}
-
-.botonInicio:hover {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  
+  .botonInicio:hover {
     background-color: #007bff;
-}
-
-.h1Inicio{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .h1Inicio {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     margin-top: auto;
     position: absolute;
@@ -35,4 +87,35 @@
     left: 50%;
     transform: translateX(-50%);
     color: #888;
+  }
+
+  .scrollButtons {
+    position: fixed;
+    left: 20px; /* Ajusta la posición a la izquierda de la pantalla */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scrollButtons button {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px; /* Espacio entre las flechas */
+    cursor: pointer;
+    border-radius: 50%; /* Forma redonda para simular flechas */
+    width: 40px; /* Ancho de las flechas */
+    height: 40px; /* Altura de las flechas */
+    font-size: 18px; /* Tamaño del ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scrollButtons button:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
   }

@@ -1,5 +1,7 @@
 const {getAllPokemons, getPokemonsById} = require ('../Controllers.js/getPokemons')
 const { createPokemon } = require('../Controllers.js/postPokemon')
+const {getPokemonsApi}= require('../Controllers.js/getPokemonsC')
+
 const getPokemonsHandler=async(req, res) =>{
     const {name} = req.query
    try {
@@ -8,6 +10,15 @@ const getPokemonsHandler=async(req, res) =>{
    } catch (error) {
     res.status(400).send({error: error.message})
    }
+}
+
+const getPokemonsCarrousel= async(req, res)=>{
+  try {
+    const pokemons3= await getPokemonsApi()
+    res.status(200).send(pokemons3)
+  } catch (error) {
+    res.status(400).send(error.message)
+  }
 }
 
 const getPokemonsIdHandler=async (req, res) =>{
@@ -52,4 +63,4 @@ const postPokemonsHandler = async (req, res) => {
   };
 
 
-module.exports={getPokemonsHandler, getPokemonsIdHandler, postPokemonsHandler}
+module.exports={getPokemonsHandler, getPokemonsIdHandler, postPokemonsHandler, getPokemonsCarrousel}

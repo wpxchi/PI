@@ -1,0 +1,27 @@
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 90%;
+    z-index: 9999;
+  }
+  
+  .alert-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .alert p {
+    margin-bottom: 10px;
+  }
+  
+  .alert hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .d-flex.justify-content-end button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
