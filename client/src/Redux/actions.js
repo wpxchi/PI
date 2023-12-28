@@ -8,7 +8,8 @@ export const ORDER_ATTACK= 'ORDER_ATTACK'
 export const ORDER_TYPES= 'ORDER_TYPES'
 export const ORDER_ORIGIN= 'ORDER_ORIGIN'
 export const FAILURE='FAILURE'
-
+export const POKEMON_DETAILS= 'POKEMON_DETAILS'
+export const POKEMON_CARROUSEL= 'POKEMON_CARROUSEL'
 
 export const allPokemons=()=>{
     return async function(dispatch){
@@ -16,6 +17,14 @@ export const allPokemons=()=>{
         dispatch({type: ALL_POKEMONS, payload: res.data})
     }
 }
+
+export const pokemonCarrousel=()=>{
+    return async function(dispatch){
+        const {data}= await axios.get("http://localhost:3001/pokemons/carrousel")
+        dispatch({type: POKEMON_CARROUSEL, payload: data})
+    }
+}
+
 
 export const allTypes=()=>{
 return async function (dispatch){
@@ -34,6 +43,14 @@ return async function (dispatch){
     }  
 }
 }
+
+export const getPokemonsDetail=(id)=>{
+    return async function(dispatch){
+        const res = await axios(`http://localhost:3001/pokemons/${id}`)
+        dispatch({type: POKEMON_DETAILS, payload:res.data})
+    }
+}
+
 
 export const FailureHandler=(Err)=>{
     return ({type: FAILURE, payload:Err})

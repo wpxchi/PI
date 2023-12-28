@@ -1,0 +1,113 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(20, 29, 196, 1) 0%, rgba(133, 81, 195, 1) 50%, rgba(224, 202, 170, 1) 100%);
+  padding-bottom: 50px; /* Añadir espacio en la parte inferior para el botón */
+}
+
+.profile-panel {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.container-two-division {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.your-profile-panel {
+  width: 100%;
+  max-width: 600px; /* Ajustar el ancho según sea necesario */
+}
+
+.container-user-profile {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-date svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.elements-panel {
+  padding: 20px;
+}
+
+.element-panel {
+  margin-bottom: 15px;
+}
+
+.element-panel small {
+  color: #6c757d;
+}
+
+.element-panel span {
+  font-weight: bold;
+}
+
+hr {
+  margin: 10px 0;
+  border: 0.5px solid #dee2e6;
+}
+
+.create-event-panel {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.create-event-panel:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para fijar el botón en la parte inferior */
+.user-profile-action-section {
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #343a40;
+}
+
+/* Estilo mejorado para el botón */
+.button-view-pokemons {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-view-pokemons:hover {
+  background-color: #218838;
+}

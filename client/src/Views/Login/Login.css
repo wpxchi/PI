@@ -1,0 +1,47 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  }
+
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #f4b7b7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo del formulario con opacidad */
+}
+
+.btn-custom {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+.btn-custom-outline {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-custom-outline:hover {
+    background-color: #f7f7f7; /* Cambio de color al pasar el mouse */
+}
