@@ -4,7 +4,7 @@
 }
 
 .menu-button {
-  background-color: #f6f7f7; /* Azul */
+  background-color: #61dafb; /* Azul */
   color: white;
   border: none;
   padding: 10px;
@@ -43,7 +43,4 @@
 
 .bio-text {
   font-size: 14px; /* Tamaño de fuente más pequeño */
-}
-.offcanvas-backdrop {
-  display: none;
 }
